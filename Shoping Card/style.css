@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  font-family: Trebuchet MS;
+}
+body {
+  margin: 0;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+}
+.card {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background-color: #2626;
+  border: 1px solid black;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+ margin-top: 0;
+ margin-bottom: 0;
+ border-radius: 10px;
+ transform: scale(1);
+}
+/*
+.card .img-card {
+  max-width: 100%;
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+
+  text-align: center;
+  position: relative;
+  background-image: linear-gradient(to right, #1c1c1c, #626262);
+}
+ .card .img-card::before {
+  content: '';
+  background-color: #282828;
+  clip-path: polygon(0 69%, 25% 85%, 36% 70%, 55% 75%, 85% 71%, 100% 43%, 100% 100%, 69% 100%, 40% 100%, 24% 100%, 7% 100%, 0 100%);
+  position: relative;
+  display: block;
+  height: 100%;
+background-image: linear-gradient(to bottom, #626262 1%, #9AC4C2 10%, #BBC5CD 10%);
+} */
+.active-img {
+  position: relative;
+  top: 15%;
+  transition: all 1s linear;
+}
+.active-t {
+  position: relative;
+  top: 14%;
+  transition: all 1s linear;
+}
+.btn-price-ul{
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+img {
+  width: 95%;
+  height: auto;
+  background: transparent;
+  transform: rotate(25deg);
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  transition: all 0.5s linear;
+}
+.card .info-card {
+  max-width: 100%;
+  width: 100%;
+  background-color: #bff2d5;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image : linear-gradient(to bottom, #262626, #262626);
+  position: relative;
+  overflow: hidden;
+}
+
+.card .info-card:before {
+    content: '';
+    background-color: #58db58;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(190px at 80% 15%);
+    transition: all 0.5s linear;
+    /*
+    top: -35%;
+    left: 35%;
+    width: 400px;
+    height: 400px;
+    transition: all .5s linear; */
+}
+.card:hover .info-card:before {
+    clip-path: circle(150px at 90% 10%);
+    transition: all 0.5s linear;
+}
+.card .info-card h1 {
+  font-size: 35px;
+  margin-top: -30px;
+  font-family: Trebuchet MS;
+  color: white;
+transition: all 0.5s linear;
+-webkit-text-stroke: 2px #f4f1f1;
+}
+.card .info-card .sizes {
+  list-style: none;
+  margin-left: -15%;
+  margin-top: 30px;
+  transition: all 0.2s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+.card .info-card .sizes > * {
+  margin-left: 10px;
+  padding: 4px 4px;
+  font-size: 30px;
+  font-family: Trebuchet MS;
+  background-color: #6259594d;
+  border-radius: 5px;
+  color: #000;
+  margin-top: -40px;
+  float: left;
+  transition: all 0.3s linear;
+}
+.card .info-card .sizes span {
+  background: #3c3333;
+color: #e1d7d7;
+}
+.card .info-card .price {
+  color: #fff;
+  font-size: 25px;
+  font-family: monospace;
+  margin-top: 0;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #352d2d;
+  letter-spacing: 3px;
+  font-size: 30px;
+  background-color: #353535;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+.card .info-card .buy-Btn{
+  min-width: 80px;
+  min-height: 35px;
+  text-align: center;
+  border: 0;
+  background-color: #353535;
+color: #3e2424;
+font-family: Trebuchet MS;
+border-radius: 5px;
+font-size: 16px;
+font-weight: bolder;
+color: azure;
+margin-bottom: 10px;
+margin-top: -20px;
+transition: all 0.4s linear;
+opacity: 0;
+}
+/* after hover  */
+.card:hover img{
+  margin-top: -50px;
+  width: calc(100% - 50px);
+  transition: all 0.4s linear;
+}
+.card:hover .sizes, .card:hover .price, .card:hover .buy-Btn{
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.8s linear;
+  cursor: pointer;
+}
+.card:hover h1 {
+  letter-spacing: 4px;
+  transition: all 0.4s linear;
+}
